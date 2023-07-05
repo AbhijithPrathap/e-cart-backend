@@ -1,0 +1,51 @@
+                                       
+                                       E-CART SERVER CREATION
+                                   ...............................
+                       1.create package.json - npm init -y
+                       2.install some libraries- npm i express cors mongoose dotenv 
+                              =>dotenv- environment variables are used to store app secret and configuration
+                                data which are retrived by running app ehen needed.
+
+                                Types
+                                =>1.system environment variables (s/m path)
+                                =>2.user environment variables (abmin)
+                                =>3.runtime/process variables (application running process) .
+
+                       3. create  .env file
+                       4.create .gitignore file
+                       5.add node_modules and .env  in .gitignore 
+                       6. create index.js
+                       7. in index.js file,
+                          =>import express.cors,dotenv    
+                          => create an app using express
+                          =>use cors and express.json() in server app
+                          =>define port number
+
+                                    MONGO DB ATLAS CONFIGURATION
+                               ......................................
+                               1.Copy connection string from Atlas and paste into .env file     
+                               2. create a db folder in server, inside create connection.js
+                               3.in connection.js import mongoose
+                               4. get db connection string from .env file
+                               5. use mongoose to connect mongodb to nodejs
+                               6.import connection.js in index.js file
+                               7.create a model in server
+                               8.create a model/collection to store product in model folder
+                               9.export model
+
+                               10.create a router for client request create router folder and create router.js file init
+                                  .->inside router.js file ,import express
+                                  .->using express create an objecr for router class inorder to setup path
+                                  .->resolve client request in various server routes
+                                  .->export router
+
+                               11.create controller folder in order to define logic to resolve client request
+
+                                    ->controller(folder)   
+                                        -productController.js
+                                        -cartController.js
+                                        -wishlistController.js
+
+                                    ->inside productController file
+                                       -import product collection
+                                     -import product collection
